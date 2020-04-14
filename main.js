@@ -34,19 +34,3 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-function login() {
-  let userEmail = document.getElementById('email').value;
-  let userPassword = document.getElementById('password').value;
-  
-  firebase.auth().createUserWithEmailAndPassword(userEmail, userPassword).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    window.alert("Error :" + errorMessage);
-  });
-}
-
-function logout(){
-firebase.auth().signOut();
-
-}
