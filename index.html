@@ -11,17 +11,27 @@
 </head> 
 <body>
 
-  <form>
-    <input type="email" class="email">
-    <input type="password" class="email">
-    <input type="submit" class="submit">
-  </form>
+ <div id="login_div" class="mainContainer">
+    <input type="email" placeholder= "Enter Email..." id="email">
+    <input type="password" placeholder= "Enter Password..." id="password">
+    <input type="submit" id="submit" onclick=login()>
+ </div>
 
+ <div id="user_div" class="logged-in">
+   <h3>Welcome User</h3>
+   <p id="user_para">Welcome to Firebase</p>
+   <button onclick="logout()">Logout</button>
+ </div>
   
+ <!-- The core Firebase JS SDK -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
   <!-- JQuery CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!-- Main Script -->
   <script src="main.js"></script>
+  
 </body>
 
 </html>
